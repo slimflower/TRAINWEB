@@ -52,4 +52,19 @@ GET /example/exploit.php?command=id HTTP/1.1
 - Nếu ta upload file ảnh lên thì web thực hiện file ảnh đó 1 cách bình thường .Nhưng nếu ta upload file bất kì không thuộc dạng file mà web cho phép thì chúng ta sẽ bị báo lỗi vì vậy lỗi này nằm ở Content-Type của POST khi gửi yêu cầu đến máy chủ vì vậy ta chỉ cần repeatẻ và sửa Content-Type thành image/jpeg thì sẽ tìm được flag
 <img width="1061" alt="Ảnh màn hình 2024-12-06 lúc 22 36 36" src="https://github.com/user-attachments/assets/69d95499-105b-4192-8dd2-56a742398a2b">
 
+# File_upload_challenges.zip
+## level 1 
+### Mô tả 
 
+<img width="1438" alt="Ảnh màn hình 2024-12-08 lúc 11 33 23" src="https://github.com/user-attachments/assets/918ca0ee-f0ca-4e77-97cb-9c3d8dae286a">
+
+### Giải pháp 
+- Nếu ta upload 1 file bất kì thì chúng ta sẽ không tìm được flag.Vậy hãy thử upload file php thử
+
+<img width="1440" alt="Ảnh màn hình 2024-12-08 lúc 11 35 25" src="https://github.com/user-attachments/assets/bdba2af4-0ed8-47f9-9c77-bafddb448273">
+
+- Tôi sẽ nhận được các tệp được liệt kê khi upload file php.Bây giờ tôi chỉ cần sửa nội dung php để cat ra file `secret.txt` là tôi sẽ tìm được flag
+
+<img width="1440" alt="Ảnh màn hình 2024-12-08 lúc 11 37 19" src="https://github.com/user-attachments/assets/af0e47af-df30-44e1-a738-e3db85ffb2a5">
+
+Flag : `CBJS{FAKE_FLAG_FAKE_FLAG}`
